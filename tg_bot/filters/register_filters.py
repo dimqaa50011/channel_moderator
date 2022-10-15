@@ -7,5 +7,5 @@ from .privat import IsPrivat
 
 def register_all_filters(dp: Dispatcher):
     dp.filters_factory.bind(IsAdmin)
-    dp.filters_factory(IsGroup)
-    dp.filters_factory(IsPrivat)
+    dp.filters_factory.bind(IsGroup)
+    dp.filters_factory.bind(IsPrivat)
